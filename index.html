@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InsightCRM AI</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-container">
+    
+    <header class="hero-section">
+      <div class="hero-content">
+        <h1>🧠 InsightCRM AI</h1>
+        <p>Predictive Customer Intelligence & Retention Engine</p>
+        <p class="subtitle">Analyze customer behavior, identify churn risk, and generate smart engagement actions using AI.</p>
+        
+        <div class="hero-stats">
+          <span class="stat-badge neutral" id="stat-total">👥 Customers Tracked: 0</span>
+          <span class="stat-badge success" id="stat-high">⭐ High-Value: 0</span>
+          <span class="stat-badge danger" id="stat-risk">⚠️ Churn Alerts: 0</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="dashboard-main">
+      
+      <section class="section-container">
+        <h2 class="section-title">CUSTOMER INTELLIGENCE VIEW</h2>
+        <div class="customer-grid" id="customer-grid">
+          </div>
+      </section>
+
+      <button class="analyse-btn" id="analyse-btn">✨ Run AI Analysis</button>
+
+      <div class="insights-grid" id="insights-content">
+        
+        <div class="column">
+          
+          <div class="card highlight-card">
+            <h3 class="card-title">✨ AI BUSINESS SUMMARY</h3>
+            <p class="summary-text" id="summary-text"></p>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title">👤 CUSTOMER INTELLIGENCE PROFILE</h3>
+            <div class="profile-details">
+              <div>
+                <p class="label">Name</p>
+                <p class="value" id="profile-name"></p>
+              </div>
+              <div>
+                <p class="label">Total Orders</p>
+                <p class="value" id="profile-orders"></p>
+              </div>
+              <div>
+                <p class="label">Last Purchase</p>
+                <p class="value" id="profile-last-purchase"></p>
+              </div>
+              <div>
+                <p class="label">AI Classification</p>
+                <p class="value" id="profile-segment"></p>
+              </div>
+              <div>
+                <p class="label">Churn Probability</p>
+                <p class="value" id="profile-churn"></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title">⭐ PREDICTIVE VALUE SCORE</h3>
+            <div class="score-container">
+              <div class="progress-bar-bg">
+                <div class="progress-bar-fill" id="score-fill"></div>
+              </div>
+              <span class="score-text"><strong id="score-text"></strong>/100</span>
+            </div>
+            <p class="score-caption">AI-computed from purchase frequency, recency & spend patterns.</p>
+          </div>
+        </div>
+
+        <div class="column">
+          
+          <div class="card highlight-card outline-green">
+            <h3 class="card-title">🎯 AI-RECOMMENDED ENGAGEMENT</h3>
+            <p class="recommendation-text" id="recommendation-text"></p>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title">📊 BEHAVIORAL INTELLIGENCE SIGNALS</h3>
+            <div class="signals-grid">
+              <div class="signal-box">
+                <p class="label">PURCHASE CADENCE</p>
+                <p class="value" id="signal-frequency"></p>
+              </div>
+              <div class="signal-box">
+                <p class="label">BRAND LOYALTY</p>
+                <p class="value" id="signal-engagement"></p>
+              </div>
+              <div class="signal-box">
+                <p class="label">CHURN PROBABILITY</p>
+                <p class="value" id="signal-retention"></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title">💬 AI OUTREACH COMPOSER</h3>
+            <p class="composer-caption">
+              Instantly compose a hyper-personalized outreach message calibrated to this customer's segment.
+            </p>
+            <div class="message-box">
+              <p id="generated-message"></p>
+            </div>
+            <button class="action-button">Send AI Message</button>
+          </div>
+
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
